@@ -6,11 +6,11 @@
 	<dict>
 		<key>Frameworks/FMDB.framework/FMDB</key>
 		<data>
-		XAAfnB4rsDWU2wHLUtn8IIIR6R4=
+		NBfu+5znucVIhrpqoAR83Drutlk=
 		</data>
 		<key>Frameworks/FMDB.framework/FMDB.framework/FMDB</key>
 		<data>
-		CJu6VnoAE1urmElsrFeL8wuhIEU=
+		r0fAjvBkjZeS0DKdmcQNy7x9/D0=
 		</data>
 		<key>Frameworks/FMDB.framework/FMDB.framework/Info.plist</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Frameworks/FMDB.framework/_CodeSignature/CodeResources</key>
 		<data>
-		g7OF+Lc+ea6YFT5YvnGjOx12ke4=
+		Oj/ln+gBxmNkL0eIB9xljCtpt0s=
 		</data>
 		<key>Headers/OTLog-Swift.h</key>
 		<data>
-		Ua/yhHApbtV5y+lGsJmK8DM2zmM=
+		xwoAUdfAvrn8gvymaMaef/0GFmk=
 		</data>
 		<key>Headers/OTLog.h</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/OTLog.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		28xaxmPSQ74vDfRg1JM5DGUM3gs=
+		SULPB1FnD0yrQqvIF+C7xq5Ua/o=
 		</data>
 		<key>Modules/OTLog.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		28xaxmPSQ74vDfRg1JM5DGUM3gs=
+		SULPB1FnD0yrQqvIF+C7xq5Ua/o=
 		</data>
 		<key>Modules/OTLog.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/OTLog.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		qhpc8aLM72OuIR+hNcwv9TDuh+o=
+		0jQICdufLIuA8ie0ov83tjh+/Bk=
 		</data>
 		<key>Modules/OTLog.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/OTLog.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		qhpc8aLM72OuIR+hNcwv9TDuh+o=
+		0jQICdufLIuA8ie0ov83tjh+/Bk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,22 +71,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XAAfnB4rsDWU2wHLUtn8IIIR6R4=
+			NBfu+5znucVIhrpqoAR83Drutlk=
 			</data>
 			<key>hash2</key>
 			<data>
-			KuoTkRGVdUiAfqEnR0BlLoB2Jd+G754IeejRssMfCWI=
+			oiUfMJwkPxIs+fyx8XOI3KmtHbrkUpJ4M1bMgK98sqI=
 			</data>
 		</dict>
 		<key>Frameworks/FMDB.framework/FMDB.framework/FMDB</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CJu6VnoAE1urmElsrFeL8wuhIEU=
+			r0fAjvBkjZeS0DKdmcQNy7x9/D0=
 			</data>
 			<key>hash2</key>
 			<data>
-			g8LDdJ0Zd0yxkDOr//RN2bWNmCYfQCNc1kUfBdA3BQE=
+			6Y7BGGtZHvCSDopmVufT6iCxeWDupMWceH1evBu6mmk=
 			</data>
 		</dict>
 		<key>Frameworks/FMDB.framework/FMDB.framework/Info.plist</key>
@@ -115,22 +115,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			g7OF+Lc+ea6YFT5YvnGjOx12ke4=
+			Oj/ln+gBxmNkL0eIB9xljCtpt0s=
 			</data>
 			<key>hash2</key>
 			<data>
-			dj+OoJWD/kt0B9hYi/V+vYK9GYVgBePfkO8UuCQlOHY=
+			dLsv15sPPEpeKzMSN81r/JzNjeOH1uwktx5wQyU+p0I=
 			</data>
 		</dict>
 		<key>Headers/OTLog-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ua/yhHApbtV5y+lGsJmK8DM2zmM=
+			xwoAUdfAvrn8gvymaMaef/0GFmk=
 			</data>
 			<key>hash2</key>
 			<data>
-			dBWMO2R8sEpj4oEFX+09i1vbf+N9DMYF59UTKbwWDQU=
+			sBGWCGC2wR6170gGg427u43DkkxkL3SzTeCa47/ryR0=
 			</data>
 		</dict>
 		<key>Headers/OTLog.h</key>
@@ -148,22 +148,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			28xaxmPSQ74vDfRg1JM5DGUM3gs=
+			SULPB1FnD0yrQqvIF+C7xq5Ua/o=
 			</data>
 			<key>hash2</key>
 			<data>
-			NY/12Xc1Fm2j+XP0M/P7Qg5MY3N5p4rDXR1a+1vbA6g=
+			LhkaJ1dSmS0+A+L5pzk9fdAEkiJ4mQbaHuZCi+oGMUk=
 			</data>
 		</dict>
 		<key>Modules/OTLog.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			28xaxmPSQ74vDfRg1JM5DGUM3gs=
+			SULPB1FnD0yrQqvIF+C7xq5Ua/o=
 			</data>
 			<key>hash2</key>
 			<data>
-			NY/12Xc1Fm2j+XP0M/P7Qg5MY3N5p4rDXR1a+1vbA6g=
+			LhkaJ1dSmS0+A+L5pzk9fdAEkiJ4mQbaHuZCi+oGMUk=
 			</data>
 		</dict>
 		<key>Modules/OTLog.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -181,11 +181,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qhpc8aLM72OuIR+hNcwv9TDuh+o=
+			0jQICdufLIuA8ie0ov83tjh+/Bk=
 			</data>
 			<key>hash2</key>
 			<data>
-			mN2oc8zKkufflCklwMsmhH10V1r82zMjHlQMJSspq98=
+			dMdqqFsjZHFlyC1+X7vLqC375HYPuNtTF/UV94+MK3E=
 			</data>
 		</dict>
 		<key>Modules/OTLog.swiftmodule/arm64.swiftdoc</key>
@@ -203,11 +203,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qhpc8aLM72OuIR+hNcwv9TDuh+o=
+			0jQICdufLIuA8ie0ov83tjh+/Bk=
 			</data>
 			<key>hash2</key>
 			<data>
-			mN2oc8zKkufflCklwMsmhH10V1r82zMjHlQMJSspq98=
+			dMdqqFsjZHFlyC1+X7vLqC375HYPuNtTF/UV94+MK3E=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

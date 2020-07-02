@@ -289,10 +289,12 @@ SWIFT_CLASS("_TtC5OTLog10OTLogModel")
 @end
 
 @class NSError;
+@class NSURLResponse;
 
 SWIFT_CLASS("_TtC5OTLog15OTPostLogResult")
 @interface OTPostLogResult : NSObject
 @property (nonatomic, strong) NSError * _Nullable error;
+@property (nonatomic, strong) NSURLResponse * _Nullable response;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end

@@ -57,13 +57,9 @@
     OTLogModel *logModel = [[OTLogModel alloc]init];
     [logModel PutContent:@"url" value:@"/test/url"];
     [logModel PutContent:@"userId" value:@"23232"];
-    
-    
     OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"topic-20200616" logSource:@"source-20200616" logContents:@[logModel] logTagContentMap:NULL];
-    
-    
     [[OTLogManager sharedInstance] postLog:logGroupModel call:^(OTPostLogResult * result) {
-
+        NSLog(@"%@",[result.response description]);
     }];
 }
 
@@ -71,7 +67,6 @@
     OTLogModel *logModel = [[OTLogModel alloc]init];
     [logModel PutContent:@"url" value:@"/test/url"];
     [logModel PutContent:@"userId" value:@"23232"];
-    
     
     OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"topic-20200616" logSource:@"source-20200616" logContents:@[logModel] logTagContentMap:NULL];
     [[OTLogManager sharedInstance] saveLogWithLogGroupModel:logGroupModel];

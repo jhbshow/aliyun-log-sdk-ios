@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		373BA0D424AD801800DE063A /* OTLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373BA0D224AD800B00DE063A /* OTLog.framework */; };
-		373BA0D524AD801800DE063A /* OTLog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 373BA0D224AD800B00DE063A /* OTLog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		373BA0D924AD838100DE063A /* OTLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373BA0D724AD837D00DE063A /* OTLog.framework */; };
+		373BA0DA24AD838100DE063A /* OTLog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 373BA0D724AD837D00DE063A /* OTLog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		375A3AAF2498618B0011E0ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3AAE2498618B0011E0ED /* AppDelegate.m */; };
 		375A3AB22498618B0011E0ED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3AB12498618B0011E0ED /* SceneDelegate.m */; };
 		375A3AB52498618B0011E0ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3AB42498618B0011E0ED /* ViewController.m */; };
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				373BA0D524AD801800DE063A /* OTLog.framework in Embed Frameworks */,
+				373BA0DA24AD838100DE063A /* OTLog.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,7 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		373BA0D224AD800B00DE063A /* OTLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OTLog.framework; sourceTree = "<group>"; };
+		373BA0D724AD837D00DE063A /* OTLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OTLog.framework; sourceTree = "<group>"; };
 		375A3AAA2498618B0011E0ED /* OTLog-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTLog-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		375A3AAD2498618B0011E0ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		375A3AAE2498618B0011E0ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373BA0D424AD801800DE063A /* OTLog.framework in Frameworks */,
+				373BA0D924AD838100DE063A /* OTLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +99,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		373BA0D124AD800B00DE063A /* OTLog */ = {
+		373BA0D624AD835D00DE063A /* OTLog */ = {
 			isa = PBXGroup;
 			children = (
-				373BA0D224AD800B00DE063A /* OTLog.framework */,
+				373BA0D724AD837D00DE063A /* OTLog.framework */,
 			);
 			path = OTLog;
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 		375A3AA12498618B0011E0ED = {
 			isa = PBXGroup;
 			children = (
-				373BA0D124AD800B00DE063A /* OTLog */,
+				373BA0D624AD835D00DE063A /* OTLog */,
 				375A3AAC2498618B0011E0ED /* OTLog-demo */,
 				375A3AC82498618C0011E0ED /* OTLog-demoTests */,
 				375A3AD32498618C0011E0ED /* OTLog-demoUITests */,
