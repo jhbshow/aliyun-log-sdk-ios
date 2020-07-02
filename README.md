@@ -5,7 +5,7 @@
 ##方式一(cocopods集成)：
 Step 1.在Podfie文件中添加
 ```   
-pod 'OTLog'
+pod 'OTAliyunLog'
 ```       
 Step 2.需要使用的OC文件中引入头文件：
 ```   
