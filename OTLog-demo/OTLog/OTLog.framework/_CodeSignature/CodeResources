@@ -6,11 +6,11 @@
 	<dict>
 		<key>Frameworks/FMDB.framework/FMDB</key>
 		<data>
-		t6tE1ku6D842sohGUxOku1HnO1c=
+		XAAfnB4rsDWU2wHLUtn8IIIR6R4=
 		</data>
 		<key>Frameworks/FMDB.framework/FMDB.framework/FMDB</key>
 		<data>
-		9EtaYtmhTAl6x/H55JXvuXf5ppk=
+		CJu6VnoAE1urmElsrFeL8wuhIEU=
 		</data>
 		<key>Frameworks/FMDB.framework/FMDB.framework/Info.plist</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Frameworks/FMDB.framework/_CodeSignature/CodeResources</key>
 		<data>
-		w6SMLiV44kQK35HCPMAOUe8Ug3I=
+		g7OF+Lc+ea6YFT5YvnGjOx12ke4=
 		</data>
 		<key>Headers/OTLog-Swift.h</key>
 		<data>
-		7vVMEKT5G1Shq1i7Vv0XZ6SwoR4=
+		Ua/yhHApbtV5y+lGsJmK8DM2zmM=
 		</data>
 		<key>Headers/OTLog.h</key>
 		<data>
@@ -38,27 +38,27 @@
 		</data>
 		<key>Modules/OTLog.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		Dhz5EMc8R1kOqFAU9XWrzubJ9ug=
+		28xaxmPSQ74vDfRg1JM5DGUM3gs=
 		</data>
 		<key>Modules/OTLog.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		Dhz5EMc8R1kOqFAU9XWrzubJ9ug=
+		28xaxmPSQ74vDfRg1JM5DGUM3gs=
 		</data>
 		<key>Modules/OTLog.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		itWaNUwfoMtuUo4ZvOW69XLj6Mo=
+		0vM5Nzj6nTAYWZKlvy6ZIHy3W9U=
 		</data>
 		<key>Modules/OTLog.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		AJRSUQdKDo3HkGI9KCgxGIj2Qnw=
+		qhpc8aLM72OuIR+hNcwv9TDuh+o=
 		</data>
 		<key>Modules/OTLog.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		itWaNUwfoMtuUo4ZvOW69XLj6Mo=
+		0vM5Nzj6nTAYWZKlvy6ZIHy3W9U=
 		</data>
 		<key>Modules/OTLog.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		AJRSUQdKDo3HkGI9KCgxGIj2Qnw=
+		qhpc8aLM72OuIR+hNcwv9TDuh+o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -71,22 +71,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t6tE1ku6D842sohGUxOku1HnO1c=
+			XAAfnB4rsDWU2wHLUtn8IIIR6R4=
 			</data>
 			<key>hash2</key>
 			<data>
-			zsZXoPXluWuhDIzgFtv8ye2aAfhBKBUcbILXlEot/DA=
+			KuoTkRGVdUiAfqEnR0BlLoB2Jd+G754IeejRssMfCWI=
 			</data>
 		</dict>
 		<key>Frameworks/FMDB.framework/FMDB.framework/FMDB</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9EtaYtmhTAl6x/H55JXvuXf5ppk=
+			CJu6VnoAE1urmElsrFeL8wuhIEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			pXBwGL+XVioaLVXy5yBAeFidyvPdlzBEY5hbMNv45gw=
+			g8LDdJ0Zd0yxkDOr//RN2bWNmCYfQCNc1kUfBdA3BQE=
 			</data>
 		</dict>
 		<key>Frameworks/FMDB.framework/FMDB.framework/Info.plist</key>
@@ -115,22 +115,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w6SMLiV44kQK35HCPMAOUe8Ug3I=
+			g7OF+Lc+ea6YFT5YvnGjOx12ke4=
 			</data>
 			<key>hash2</key>
 			<data>
-			pVDM7h3J01KoQYRCEnKmjLwfvnJPqjXp1UDDdResGY4=
+			dj+OoJWD/kt0B9hYi/V+vYK9GYVgBePfkO8UuCQlOHY=
 			</data>
 		</dict>
 		<key>Headers/OTLog-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7vVMEKT5G1Shq1i7Vv0XZ6SwoR4=
+			Ua/yhHApbtV5y+lGsJmK8DM2zmM=
 			</data>
 			<key>hash2</key>
 			<data>
-			runLoKKHztCLucidYG3/OyJDJayYFOueo44zKF0rl/M=
+			dBWMO2R8sEpj4oEFX+09i1vbf+N9DMYF59UTKbwWDQU=
 			</data>
 		</dict>
 		<key>Headers/OTLog.h</key>
@@ -148,66 +148,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Dhz5EMc8R1kOqFAU9XWrzubJ9ug=
+			28xaxmPSQ74vDfRg1JM5DGUM3gs=
 			</data>
 			<key>hash2</key>
 			<data>
-			qlwXEnSEk7eGfOWjdlEOrlp2aLuS3ofHCRHcrhWMRu4=
+			NY/12Xc1Fm2j+XP0M/P7Qg5MY3N5p4rDXR1a+1vbA6g=
 			</data>
 		</dict>
 		<key>Modules/OTLog.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Dhz5EMc8R1kOqFAU9XWrzubJ9ug=
+			28xaxmPSQ74vDfRg1JM5DGUM3gs=
 			</data>
 			<key>hash2</key>
 			<data>
-			qlwXEnSEk7eGfOWjdlEOrlp2aLuS3ofHCRHcrhWMRu4=
+			NY/12Xc1Fm2j+XP0M/P7Qg5MY3N5p4rDXR1a+1vbA6g=
 			</data>
 		</dict>
 		<key>Modules/OTLog.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			itWaNUwfoMtuUo4ZvOW69XLj6Mo=
+			0vM5Nzj6nTAYWZKlvy6ZIHy3W9U=
 			</data>
 			<key>hash2</key>
 			<data>
-			l2pH/zM1kJn3YONlK8XuymnLurqQ000suuc68v5mLeI=
+			j4IrLrula8Zk5gU1Dz86aVGdJSNJiZ1S0TSUmNXyQyM=
 			</data>
 		</dict>
 		<key>Modules/OTLog.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AJRSUQdKDo3HkGI9KCgxGIj2Qnw=
+			qhpc8aLM72OuIR+hNcwv9TDuh+o=
 			</data>
 			<key>hash2</key>
 			<data>
-			XuikUj0ZmsOPNXuBXsmgogAOS7wlhK6ja7goQ6OTsl4=
+			mN2oc8zKkufflCklwMsmhH10V1r82zMjHlQMJSspq98=
 			</data>
 		</dict>
 		<key>Modules/OTLog.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			itWaNUwfoMtuUo4ZvOW69XLj6Mo=
+			0vM5Nzj6nTAYWZKlvy6ZIHy3W9U=
 			</data>
 			<key>hash2</key>
 			<data>
-			l2pH/zM1kJn3YONlK8XuymnLurqQ000suuc68v5mLeI=
+			j4IrLrula8Zk5gU1Dz86aVGdJSNJiZ1S0TSUmNXyQyM=
 			</data>
 		</dict>
 		<key>Modules/OTLog.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AJRSUQdKDo3HkGI9KCgxGIj2Qnw=
+			qhpc8aLM72OuIR+hNcwv9TDuh+o=
 			</data>
 			<key>hash2</key>
 			<data>
-			XuikUj0ZmsOPNXuBXsmgogAOS7wlhK6ja7goQ6OTsl4=
+			mN2oc8zKkufflCklwMsmhH10V1r82zMjHlQMJSspq98=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

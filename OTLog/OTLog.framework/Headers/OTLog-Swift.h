@@ -205,7 +205,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-/// 本地缓存日志的管理器。在实例化时会开启定时器,网络状态监控器。每隔30秒会判断是否达到发送的网络条件,如果是的话,则从缓存中读取30条记录,然后批量上传。同时还会判断本地数据库文件是否达到大小上限(默认是30M,大于30M时从数据库中删除最先加入到数据库中的2000条记录) 此时处于上传中状态。当所有在group中的请求都结束时,才重置为可用状态。
+/// 本地缓存日志的管理器。在实例化时会开启定时器,网络状态监控器。每隔30秒会判断是否达到发送的网络条件,如果是的话,则从缓存中读取30条记录,然后批量上传。同时还会判断本地数据库文件是否达到大小上限  此时处于上传中状态。当所有在group中的请求都结束时,才重置为可用状态。
 SWIFT_CLASS("_TtC5OTLog17CacheCheckManager")
 @interface CacheCheckManager : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -256,14 +256,13 @@ SWIFT_CLASS("_TtC5OTLog15OTLogGroupModel")
 @interface OTLogGroupModel : NSObject
 /// 初始化方法
 - (nonnull instancetype)initWithLogTopic:(NSString * _Nullable)logTopic logSource:(NSString * _Nullable)logSource logContents:(NSArray<OTLogModel *> * _Nonnull)logContents logTagContentMap:(NSDictionary<NSString *, id> * _Nullable)logTagContentMap OBJC_DESIGNATED_INITIALIZER;
-/// 转换成LogGroup
-- (LogGroup * _Nonnull)convertToLogGroup SWIFT_WARN_UNUSED_RESULT;
+/// 转换从json字符串
+- (nonnull instancetype)initWithJsonString:(NSString * _Nonnull)jsonString OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
-@class NSURLResponse;
-@class NSError;
+@class OTPostLogResult;
 
 SWIFT_CLASS("_TtC5OTLog12OTLogManager")
 @interface OTLogManager : NSObject
@@ -273,7 +272,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) OTLogManager
 /// 初始化
 - (void)setupConfigWithLogConfig:(OTLogConfig * _Nonnull)logConfig;
 /// 上传日志
-- (void)postLog:(OTLogGroupModel * _Nonnull)logGroup call:(void (^ _Nonnull)(NSURLResponse * _Nullable, NSError * _Nullable))call;
+- (void)postLog:(OTLogGroupModel * _Nonnull)logGroup call:(void (^ _Nonnull)(OTPostLogResult * _Nonnull))call;
+/// 开始上传本地日志(30秒上传一次)
+- (void)startUploadLogWithTimeInterval:(NSInteger)timeInterval;
+/// 保存日志
+- (void)saveLogWithLogGroupModel:(OTLogGroupModel * _Nonnull)logGroupModel;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -281,8 +284,17 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) OTLogManager
 SWIFT_CLASS("_TtC5OTLog10OTLogModel")
 @interface OTLogModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)putTime:(int32_t)time;
-- (void)putContent:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
+- (void)PutTime:(int32_t)time;
+- (void)PutContent:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
+@end
+
+@class NSError;
+
+SWIFT_CLASS("_TtC5OTLog15OTPostLogResult")
+@interface OTPostLogResult : NSObject
+@property (nonatomic, strong) NSError * _Nullable error;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
