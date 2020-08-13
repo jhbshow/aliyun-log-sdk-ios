@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
- 
-#import <OTLog/OTLog-Swift.h>
+
+#import "OTLog_Demo-Swift.h"
 @interface ViewController ()
 
 @end
@@ -77,4 +77,5 @@
 }
 
 @end
+
 

@@ -7,44 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		373BA0D924AD838100DE063A /* OTLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 373BA0D724AD837D00DE063A /* OTLog.framework */; };
-		373BA0DA24AD838100DE063A /* OTLog.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 373BA0D724AD837D00DE063A /* OTLog.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		375A3AAF2498618B0011E0ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3AAE2498618B0011E0ED /* AppDelegate.m */; };
-		375A3AB22498618B0011E0ED /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3AB12498618B0011E0ED /* SceneDelegate.m */; };
-		375A3AB52498618B0011E0ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3AB42498618B0011E0ED /* ViewController.m */; };
-		375A3AB82498618B0011E0ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375A3AB62498618B0011E0ED /* Main.storyboard */; };
-		375A3ABA2498618C0011E0ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375A3AB92498618C0011E0ED /* Assets.xcassets */; };
-		375A3ABD2498618C0011E0ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375A3ABB2498618C0011E0ED /* LaunchScreen.storyboard */; };
-		375A3AC02498618C0011E0ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3ABF2498618C0011E0ED /* main.m */; };
-		375A3ACA2498618C0011E0ED /* OTLog_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3AC92498618C0011E0ED /* OTLog_demoTests.m */; };
-		375A3AD52498618C0011E0ED /* OTLog_demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 375A3AD42498618C0011E0ED /* OTLog_demoUITests.m */; };
+		3750E03624E4D91200DBDE19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750E03524E4D91200DBDE19 /* AppDelegate.m */; };
+		3750E03924E4D91200DBDE19 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750E03824E4D91200DBDE19 /* SceneDelegate.m */; };
+		3750E03C24E4D91200DBDE19 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750E03B24E4D91200DBDE19 /* ViewController.m */; };
+		3750E03F24E4D91200DBDE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3750E03D24E4D91200DBDE19 /* Main.storyboard */; };
+		3750E04124E4D91300DBDE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3750E04024E4D91300DBDE19 /* Assets.xcassets */; };
+		3750E04424E4D91300DBDE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3750E04224E4D91300DBDE19 /* LaunchScreen.storyboard */; };
+		3750E04724E4D91300DBDE19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750E04624E4D91300DBDE19 /* main.m */; };
+		3750E05124E4D91300DBDE19 /* OTLog_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750E05024E4D91300DBDE19 /* OTLog_DemoTests.m */; };
+		3750E05C24E4D91300DBDE19 /* OTLog_DemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3750E05B24E4D91300DBDE19 /* OTLog_DemoUITests.m */; };
+		3750E09724E4D9A800DBDE19 /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3750E09524E4D97C00DBDE19 /* FMDB.framework */; };
+		3750E09824E4D9A800DBDE19 /* FMDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3750E09524E4D97C00DBDE19 /* FMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3750E0AF24E4E0A000DBDE19 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E09C24E4E0A000DBDE19 /* NetworkReachabilityManager.swift */; };
+		3750E0B024E4E0A000DBDE19 /* LogGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E09D24E4E0A000DBDE19 /* LogGroup.swift */; };
+		3750E0B124E4E0A000DBDE19 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E09E24E4E0A000DBDE19 /* Log.swift */; };
+		3750E0B224E4E0A000DBDE19 /* CacheCheckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E09F24E4E0A000DBDE19 /* CacheCheckManager.swift */; };
+		3750E0B324E4E0A000DBDE19 /* SLSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0A124E4E0A000DBDE19 /* SLSConfig.swift */; };
+		3750E0B424E4E0A000DBDE19 /* LogError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0A224E4E0A000DBDE19 /* LogError.swift */; };
+		3750E0B524E4E0A000DBDE19 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0A324E4E0A000DBDE19 /* DBManager.swift */; };
+		3750E0B624E4E0A000DBDE19 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0A424E4E0A000DBDE19 /* Tools.swift */; };
+		3750E0B724E4E0A000DBDE19 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0A524E4E0A000DBDE19 /* Const.swift */; };
+		3750E0B824E4E0A000DBDE19 /* lz4.c in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0A624E4E0A000DBDE19 /* lz4.c */; };
+		3750E0B924E4E0A000DBDE19 /* LogClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0A724E4E0A000DBDE19 /* LogClient.swift */; };
+		3750E0BA24E4E0A000DBDE19 /* OTLogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0A924E4E0A000DBDE19 /* OTLogManager.swift */; };
+		3750E0BB24E4E0A000DBDE19 /* OTPostLogResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0AA24E4E0A000DBDE19 /* OTPostLogResult.swift */; };
+		3750E0BC24E4E0A000DBDE19 /* OTSqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0AB24E4E0A000DBDE19 /* OTSqliteManager.swift */; };
+		3750E0BD24E4E0A000DBDE19 /* OTLogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0AC24E4E0A000DBDE19 /* OTLogModel.swift */; };
+		3750E0BE24E4E0A000DBDE19 /* OTLogGroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0AD24E4E0A000DBDE19 /* OTLogGroupModel.swift */; };
+		3750E0BF24E4E0A000DBDE19 /* OTLogConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3750E0AE24E4E0A000DBDE19 /* OTLogConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		375A3AC62498618C0011E0ED /* PBXContainerItemProxy */ = {
+		3750E04D24E4D91300DBDE19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 375A3AA22498618B0011E0ED /* Project object */;
+			containerPortal = 3750E02924E4D91200DBDE19 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 375A3AA92498618B0011E0ED;
-			remoteInfo = "OTLog-demo";
+			remoteGlobalIDString = 3750E03024E4D91200DBDE19;
+			remoteInfo = "OTLog-Demo";
 		};
-		375A3AD12498618C0011E0ED /* PBXContainerItemProxy */ = {
+		3750E05824E4D91300DBDE19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 375A3AA22498618B0011E0ED /* Project object */;
+			containerPortal = 3750E02924E4D91200DBDE19 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 375A3AA92498618B0011E0ED;
-			remoteInfo = "OTLog-demo";
+			remoteGlobalIDString = 3750E03024E4D91200DBDE19;
+			remoteInfo = "OTLog-Demo";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		373BA0CC24AD7E1E00DE063A /* Embed Frameworks */ = {
+		3750E09924E4D9A800DBDE19 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				373BA0DA24AD838100DE063A /* OTLog.framework in Embed Frameworks */,
+				3750E09824E4D9A800DBDE19 /* FMDB.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -52,44 +69,62 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		373BA0D724AD837D00DE063A /* OTLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OTLog.framework; sourceTree = "<group>"; };
-		375A3AAA2498618B0011E0ED /* OTLog-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTLog-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		375A3AAD2498618B0011E0ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		375A3AAE2498618B0011E0ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		375A3AB02498618B0011E0ED /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		375A3AB12498618B0011E0ED /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		375A3AB32498618B0011E0ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		375A3AB42498618B0011E0ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		375A3AB72498618B0011E0ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		375A3AB92498618C0011E0ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		375A3ABC2498618C0011E0ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		375A3ABE2498618C0011E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		375A3ABF2498618C0011E0ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		375A3AC52498618C0011E0ED /* OTLog-demoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OTLog-demoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		375A3AC92498618C0011E0ED /* OTLog_demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLog_demoTests.m; sourceTree = "<group>"; };
-		375A3ACB2498618C0011E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		375A3AD02498618C0011E0ED /* OTLog-demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OTLog-demoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		375A3AD42498618C0011E0ED /* OTLog_demoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLog_demoUITests.m; sourceTree = "<group>"; };
-		375A3AD62498618C0011E0ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3750E03124E4D91200DBDE19 /* OTLog-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTLog-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3750E03424E4D91200DBDE19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3750E03524E4D91200DBDE19 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3750E03724E4D91200DBDE19 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		3750E03824E4D91200DBDE19 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		3750E03A24E4D91200DBDE19 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3750E03B24E4D91200DBDE19 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3750E03E24E4D91200DBDE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3750E04024E4D91300DBDE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3750E04324E4D91300DBDE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3750E04524E4D91300DBDE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3750E04624E4D91300DBDE19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3750E04C24E4D91300DBDE19 /* OTLog-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OTLog-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3750E05024E4D91300DBDE19 /* OTLog_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLog_DemoTests.m; sourceTree = "<group>"; };
+		3750E05224E4D91300DBDE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3750E05724E4D91300DBDE19 /* OTLog-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OTLog-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3750E05B24E4D91300DBDE19 /* OTLog_DemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTLog_DemoUITests.m; sourceTree = "<group>"; };
+		3750E05D24E4D91300DBDE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3750E09524E4D97C00DBDE19 /* FMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FMDB.framework; sourceTree = "<group>"; };
+		3750E09C24E4E0A000DBDE19 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		3750E09D24E4E0A000DBDE19 /* LogGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogGroup.swift; sourceTree = "<group>"; };
+		3750E09E24E4E0A000DBDE19 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		3750E09F24E4E0A000DBDE19 /* CacheCheckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheCheckManager.swift; sourceTree = "<group>"; };
+		3750E0A024E4E0A000DBDE19 /* lz4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lz4.h; sourceTree = "<group>"; };
+		3750E0A124E4E0A000DBDE19 /* SLSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLSConfig.swift; sourceTree = "<group>"; };
+		3750E0A224E4E0A000DBDE19 /* LogError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogError.swift; sourceTree = "<group>"; };
+		3750E0A324E4E0A000DBDE19 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		3750E0A424E4E0A000DBDE19 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		3750E0A524E4E0A000DBDE19 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		3750E0A624E4E0A000DBDE19 /* lz4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lz4.c; sourceTree = "<group>"; };
+		3750E0A724E4E0A000DBDE19 /* LogClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogClient.swift; sourceTree = "<group>"; };
+		3750E0A924E4E0A000DBDE19 /* OTLogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTLogManager.swift; sourceTree = "<group>"; };
+		3750E0AA24E4E0A000DBDE19 /* OTPostLogResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPostLogResult.swift; sourceTree = "<group>"; };
+		3750E0AB24E4E0A000DBDE19 /* OTSqliteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTSqliteManager.swift; sourceTree = "<group>"; };
+		3750E0AC24E4E0A000DBDE19 /* OTLogModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTLogModel.swift; sourceTree = "<group>"; };
+		3750E0AD24E4E0A000DBDE19 /* OTLogGroupModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTLogGroupModel.swift; sourceTree = "<group>"; };
+		3750E0AE24E4E0A000DBDE19 /* OTLogConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTLogConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		375A3AA72498618B0011E0ED /* Frameworks */ = {
+		3750E02E24E4D91200DBDE19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373BA0D924AD838100DE063A /* OTLog.framework in Frameworks */,
+				3750E09724E4D9A800DBDE19 /* FMDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		375A3AC22498618C0011E0ED /* Frameworks */ = {
+		3750E04924E4D91300DBDE19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		375A3ACD2498618C0011E0ED /* Frameworks */ = {
+		3750E05424E4D91300DBDE19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -99,151 +134,186 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		373BA0D624AD835D00DE063A /* OTLog */ = {
+		3750E02824E4D91200DBDE19 = {
 			isa = PBXGroup;
 			children = (
-				373BA0D724AD837D00DE063A /* OTLog.framework */,
-			);
-			path = OTLog;
-			sourceTree = "<group>";
-		};
-		375A3AA12498618B0011E0ED = {
-			isa = PBXGroup;
-			children = (
-				373BA0D624AD835D00DE063A /* OTLog */,
-				375A3AAC2498618B0011E0ED /* OTLog-demo */,
-				375A3AC82498618C0011E0ED /* OTLog-demoTests */,
-				375A3AD32498618C0011E0ED /* OTLog-demoUITests */,
-				375A3AAB2498618B0011E0ED /* Products */,
+				3750E09A24E4E0A000DBDE19 /* OTLog */,
+				3750E03324E4D91200DBDE19 /* OTLog-Demo */,
+				3750E04F24E4D91300DBDE19 /* OTLog-DemoTests */,
+				3750E05A24E4D91300DBDE19 /* OTLog-DemoUITests */,
+				3750E03224E4D91200DBDE19 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		375A3AAB2498618B0011E0ED /* Products */ = {
+		3750E03224E4D91200DBDE19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				375A3AAA2498618B0011E0ED /* OTLog-demo.app */,
-				375A3AC52498618C0011E0ED /* OTLog-demoTests.xctest */,
-				375A3AD02498618C0011E0ED /* OTLog-demoUITests.xctest */,
+				3750E03124E4D91200DBDE19 /* OTLog-Demo.app */,
+				3750E04C24E4D91300DBDE19 /* OTLog-DemoTests.xctest */,
+				3750E05724E4D91300DBDE19 /* OTLog-DemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		375A3AAC2498618B0011E0ED /* OTLog-demo */ = {
+		3750E03324E4D91200DBDE19 /* OTLog-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				375A3AAD2498618B0011E0ED /* AppDelegate.h */,
-				375A3AAE2498618B0011E0ED /* AppDelegate.m */,
-				375A3AB02498618B0011E0ED /* SceneDelegate.h */,
-				375A3AB12498618B0011E0ED /* SceneDelegate.m */,
-				375A3AB32498618B0011E0ED /* ViewController.h */,
-				375A3AB42498618B0011E0ED /* ViewController.m */,
-				375A3AB62498618B0011E0ED /* Main.storyboard */,
-				375A3AB92498618C0011E0ED /* Assets.xcassets */,
-				375A3ABB2498618C0011E0ED /* LaunchScreen.storyboard */,
-				375A3ABE2498618C0011E0ED /* Info.plist */,
-				375A3ABF2498618C0011E0ED /* main.m */,
+				3750E09524E4D97C00DBDE19 /* FMDB.framework */,
+				3750E03424E4D91200DBDE19 /* AppDelegate.h */,
+				3750E03524E4D91200DBDE19 /* AppDelegate.m */,
+				3750E03724E4D91200DBDE19 /* SceneDelegate.h */,
+				3750E03824E4D91200DBDE19 /* SceneDelegate.m */,
+				3750E03A24E4D91200DBDE19 /* ViewController.h */,
+				3750E03B24E4D91200DBDE19 /* ViewController.m */,
+				3750E03D24E4D91200DBDE19 /* Main.storyboard */,
+				3750E04024E4D91300DBDE19 /* Assets.xcassets */,
+				3750E04224E4D91300DBDE19 /* LaunchScreen.storyboard */,
+				3750E04524E4D91300DBDE19 /* Info.plist */,
+				3750E04624E4D91300DBDE19 /* main.m */,
 			);
-			path = "OTLog-demo";
+			path = "OTLog-Demo";
 			sourceTree = "<group>";
 		};
-		375A3AC82498618C0011E0ED /* OTLog-demoTests */ = {
+		3750E04F24E4D91300DBDE19 /* OTLog-DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				375A3AC92498618C0011E0ED /* OTLog_demoTests.m */,
-				375A3ACB2498618C0011E0ED /* Info.plist */,
+				3750E05024E4D91300DBDE19 /* OTLog_DemoTests.m */,
+				3750E05224E4D91300DBDE19 /* Info.plist */,
 			);
-			path = "OTLog-demoTests";
+			path = "OTLog-DemoTests";
 			sourceTree = "<group>";
 		};
-		375A3AD32498618C0011E0ED /* OTLog-demoUITests */ = {
+		3750E05A24E4D91300DBDE19 /* OTLog-DemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				375A3AD42498618C0011E0ED /* OTLog_demoUITests.m */,
-				375A3AD62498618C0011E0ED /* Info.plist */,
+				3750E05B24E4D91300DBDE19 /* OTLog_DemoUITests.m */,
+				3750E05D24E4D91300DBDE19 /* Info.plist */,
 			);
-			path = "OTLog-demoUITests";
+			path = "OTLog-DemoUITests";
+			sourceTree = "<group>";
+		};
+		3750E09A24E4E0A000DBDE19 /* OTLog */ = {
+			isa = PBXGroup;
+			children = (
+				3750E09B24E4E0A000DBDE19 /* AliyunLOGiOS */,
+				3750E0A824E4E0A000DBDE19 /* JHB */,
+			);
+			name = OTLog;
+			path = ../OTLog;
+			sourceTree = "<group>";
+		};
+		3750E09B24E4E0A000DBDE19 /* AliyunLOGiOS */ = {
+			isa = PBXGroup;
+			children = (
+				3750E09C24E4E0A000DBDE19 /* NetworkReachabilityManager.swift */,
+				3750E09D24E4E0A000DBDE19 /* LogGroup.swift */,
+				3750E09E24E4E0A000DBDE19 /* Log.swift */,
+				3750E09F24E4E0A000DBDE19 /* CacheCheckManager.swift */,
+				3750E0A024E4E0A000DBDE19 /* lz4.h */,
+				3750E0A124E4E0A000DBDE19 /* SLSConfig.swift */,
+				3750E0A224E4E0A000DBDE19 /* LogError.swift */,
+				3750E0A324E4E0A000DBDE19 /* DBManager.swift */,
+				3750E0A424E4E0A000DBDE19 /* Tools.swift */,
+				3750E0A524E4E0A000DBDE19 /* Const.swift */,
+				3750E0A624E4E0A000DBDE19 /* lz4.c */,
+				3750E0A724E4E0A000DBDE19 /* LogClient.swift */,
+			);
+			path = AliyunLOGiOS;
+			sourceTree = "<group>";
+		};
+		3750E0A824E4E0A000DBDE19 /* JHB */ = {
+			isa = PBXGroup;
+			children = (
+				3750E0A924E4E0A000DBDE19 /* OTLogManager.swift */,
+				3750E0AA24E4E0A000DBDE19 /* OTPostLogResult.swift */,
+				3750E0AB24E4E0A000DBDE19 /* OTSqliteManager.swift */,
+				3750E0AC24E4E0A000DBDE19 /* OTLogModel.swift */,
+				3750E0AD24E4E0A000DBDE19 /* OTLogGroupModel.swift */,
+				3750E0AE24E4E0A000DBDE19 /* OTLogConfig.swift */,
+			);
+			path = JHB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		375A3AA92498618B0011E0ED /* OTLog-demo */ = {
+		3750E03024E4D91200DBDE19 /* OTLog-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 375A3AD92498618C0011E0ED /* Build configuration list for PBXNativeTarget "OTLog-demo" */;
+			buildConfigurationList = 3750E06024E4D91300DBDE19 /* Build configuration list for PBXNativeTarget "OTLog-Demo" */;
 			buildPhases = (
-				375A3AA62498618B0011E0ED /* Sources */,
-				375A3AA72498618B0011E0ED /* Frameworks */,
-				375A3AA82498618B0011E0ED /* Resources */,
-				373BA0CC24AD7E1E00DE063A /* Embed Frameworks */,
+				3750E02D24E4D91200DBDE19 /* Sources */,
+				3750E02E24E4D91200DBDE19 /* Frameworks */,
+				3750E02F24E4D91200DBDE19 /* Resources */,
+				3750E09924E4D9A800DBDE19 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "OTLog-demo";
-			productName = "OTLog-demo";
-			productReference = 375A3AAA2498618B0011E0ED /* OTLog-demo.app */;
+			name = "OTLog-Demo";
+			productName = "OTLog-Demo";
+			productReference = 3750E03124E4D91200DBDE19 /* OTLog-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		375A3AC42498618C0011E0ED /* OTLog-demoTests */ = {
+		3750E04B24E4D91300DBDE19 /* OTLog-DemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 375A3ADC2498618C0011E0ED /* Build configuration list for PBXNativeTarget "OTLog-demoTests" */;
+			buildConfigurationList = 3750E06324E4D91300DBDE19 /* Build configuration list for PBXNativeTarget "OTLog-DemoTests" */;
 			buildPhases = (
-				375A3AC12498618C0011E0ED /* Sources */,
-				375A3AC22498618C0011E0ED /* Frameworks */,
-				375A3AC32498618C0011E0ED /* Resources */,
+				3750E04824E4D91300DBDE19 /* Sources */,
+				3750E04924E4D91300DBDE19 /* Frameworks */,
+				3750E04A24E4D91300DBDE19 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				375A3AC72498618C0011E0ED /* PBXTargetDependency */,
+				3750E04E24E4D91300DBDE19 /* PBXTargetDependency */,
 			);
-			name = "OTLog-demoTests";
-			productName = "OTLog-demoTests";
-			productReference = 375A3AC52498618C0011E0ED /* OTLog-demoTests.xctest */;
+			name = "OTLog-DemoTests";
+			productName = "OTLog-DemoTests";
+			productReference = 3750E04C24E4D91300DBDE19 /* OTLog-DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		375A3ACF2498618C0011E0ED /* OTLog-demoUITests */ = {
+		3750E05624E4D91300DBDE19 /* OTLog-DemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 375A3ADF2498618C0011E0ED /* Build configuration list for PBXNativeTarget "OTLog-demoUITests" */;
+			buildConfigurationList = 3750E06624E4D91300DBDE19 /* Build configuration list for PBXNativeTarget "OTLog-DemoUITests" */;
 			buildPhases = (
-				375A3ACC2498618C0011E0ED /* Sources */,
-				375A3ACD2498618C0011E0ED /* Frameworks */,
-				375A3ACE2498618C0011E0ED /* Resources */,
+				3750E05324E4D91300DBDE19 /* Sources */,
+				3750E05424E4D91300DBDE19 /* Frameworks */,
+				3750E05524E4D91300DBDE19 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				375A3AD22498618C0011E0ED /* PBXTargetDependency */,
+				3750E05924E4D91300DBDE19 /* PBXTargetDependency */,
 			);
-			name = "OTLog-demoUITests";
-			productName = "OTLog-demoUITests";
-			productReference = 375A3AD02498618C0011E0ED /* OTLog-demoUITests.xctest */;
+			name = "OTLog-DemoUITests";
+			productName = "OTLog-DemoUITests";
+			productReference = 3750E05724E4D91300DBDE19 /* OTLog-DemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		375A3AA22498618B0011E0ED /* Project object */ = {
+		3750E02924E4D91200DBDE19 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = cuirhong;
 				TargetAttributes = {
-					375A3AA92498618B0011E0ED = {
+					3750E03024E4D91200DBDE19 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
-					375A3AC42498618C0011E0ED = {
+					3750E04B24E4D91300DBDE19 = {
 						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = 375A3AA92498618B0011E0ED;
+						TestTargetID = 3750E03024E4D91200DBDE19;
 					};
-					375A3ACF2498618C0011E0ED = {
+					3750E05624E4D91300DBDE19 = {
 						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = 375A3AA92498618B0011E0ED;
+						TestTargetID = 3750E03024E4D91200DBDE19;
 					};
 				};
 			};
-			buildConfigurationList = 375A3AA52498618B0011E0ED /* Build configuration list for PBXProject "OTLog-demo" */;
+			buildConfigurationList = 3750E02C24E4D91200DBDE19 /* Build configuration list for PBXProject "OTLog-Demo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -251,37 +321,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 375A3AA12498618B0011E0ED;
-			productRefGroup = 375A3AAB2498618B0011E0ED /* Products */;
+			mainGroup = 3750E02824E4D91200DBDE19;
+			productRefGroup = 3750E03224E4D91200DBDE19 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				375A3AA92498618B0011E0ED /* OTLog-demo */,
-				375A3AC42498618C0011E0ED /* OTLog-demoTests */,
-				375A3ACF2498618C0011E0ED /* OTLog-demoUITests */,
+				3750E03024E4D91200DBDE19 /* OTLog-Demo */,
+				3750E04B24E4D91300DBDE19 /* OTLog-DemoTests */,
+				3750E05624E4D91300DBDE19 /* OTLog-DemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		375A3AA82498618B0011E0ED /* Resources */ = {
+		3750E02F24E4D91200DBDE19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375A3ABD2498618C0011E0ED /* LaunchScreen.storyboard in Resources */,
-				375A3ABA2498618C0011E0ED /* Assets.xcassets in Resources */,
-				375A3AB82498618B0011E0ED /* Main.storyboard in Resources */,
+				3750E04424E4D91300DBDE19 /* LaunchScreen.storyboard in Resources */,
+				3750E04124E4D91300DBDE19 /* Assets.xcassets in Resources */,
+				3750E03F24E4D91200DBDE19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		375A3AC32498618C0011E0ED /* Resources */ = {
+		3750E04A24E4D91300DBDE19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		375A3ACE2498618C0011E0ED /* Resources */ = {
+		3750E05524E4D91300DBDE19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -291,61 +361,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		375A3AA62498618B0011E0ED /* Sources */ = {
+		3750E02D24E4D91200DBDE19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375A3AB52498618B0011E0ED /* ViewController.m in Sources */,
-				375A3AAF2498618B0011E0ED /* AppDelegate.m in Sources */,
-				375A3AC02498618C0011E0ED /* main.m in Sources */,
-				375A3AB22498618B0011E0ED /* SceneDelegate.m in Sources */,
+				3750E0B824E4E0A000DBDE19 /* lz4.c in Sources */,
+				3750E0BB24E4E0A000DBDE19 /* OTPostLogResult.swift in Sources */,
+				3750E0AF24E4E0A000DBDE19 /* NetworkReachabilityManager.swift in Sources */,
+				3750E0B124E4E0A000DBDE19 /* Log.swift in Sources */,
+				3750E03C24E4D91200DBDE19 /* ViewController.m in Sources */,
+				3750E0BD24E4E0A000DBDE19 /* OTLogModel.swift in Sources */,
+				3750E0BF24E4E0A000DBDE19 /* OTLogConfig.swift in Sources */,
+				3750E0B624E4E0A000DBDE19 /* Tools.swift in Sources */,
+				3750E0B924E4E0A000DBDE19 /* LogClient.swift in Sources */,
+				3750E0B424E4E0A000DBDE19 /* LogError.swift in Sources */,
+				3750E0BC24E4E0A000DBDE19 /* OTSqliteManager.swift in Sources */,
+				3750E03624E4D91200DBDE19 /* AppDelegate.m in Sources */,
+				3750E0BE24E4E0A000DBDE19 /* OTLogGroupModel.swift in Sources */,
+				3750E04724E4D91300DBDE19 /* main.m in Sources */,
+				3750E0B024E4E0A000DBDE19 /* LogGroup.swift in Sources */,
+				3750E03924E4D91200DBDE19 /* SceneDelegate.m in Sources */,
+				3750E0B224E4E0A000DBDE19 /* CacheCheckManager.swift in Sources */,
+				3750E0B324E4E0A000DBDE19 /* SLSConfig.swift in Sources */,
+				3750E0BA24E4E0A000DBDE19 /* OTLogManager.swift in Sources */,
+				3750E0B524E4E0A000DBDE19 /* DBManager.swift in Sources */,
+				3750E0B724E4E0A000DBDE19 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		375A3AC12498618C0011E0ED /* Sources */ = {
+		3750E04824E4D91300DBDE19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375A3ACA2498618C0011E0ED /* OTLog_demoTests.m in Sources */,
+				3750E05124E4D91300DBDE19 /* OTLog_DemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		375A3ACC2498618C0011E0ED /* Sources */ = {
+		3750E05324E4D91300DBDE19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375A3AD52498618C0011E0ED /* OTLog_demoUITests.m in Sources */,
+				3750E05C24E4D91300DBDE19 /* OTLog_DemoUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		375A3AC72498618C0011E0ED /* PBXTargetDependency */ = {
+		3750E04E24E4D91300DBDE19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 375A3AA92498618B0011E0ED /* OTLog-demo */;
-			targetProxy = 375A3AC62498618C0011E0ED /* PBXContainerItemProxy */;
+			target = 3750E03024E4D91200DBDE19 /* OTLog-Demo */;
+			targetProxy = 3750E04D24E4D91300DBDE19 /* PBXContainerItemProxy */;
 		};
-		375A3AD22498618C0011E0ED /* PBXTargetDependency */ = {
+		3750E05924E4D91300DBDE19 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 375A3AA92498618B0011E0ED /* OTLog-demo */;
-			targetProxy = 375A3AD12498618C0011E0ED /* PBXContainerItemProxy */;
+			target = 3750E03024E4D91200DBDE19 /* OTLog-Demo */;
+			targetProxy = 3750E05824E4D91300DBDE19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		375A3AB62498618B0011E0ED /* Main.storyboard */ = {
+		3750E03D24E4D91200DBDE19 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				375A3AB72498618B0011E0ED /* Base */,
+				3750E03E24E4D91200DBDE19 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		375A3ABB2498618C0011E0ED /* LaunchScreen.storyboard */ = {
+		3750E04224E4D91300DBDE19 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				375A3ABC2498618C0011E0ED /* Base */,
+				3750E04324E4D91300DBDE19 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -353,7 +440,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		375A3AD72498618C0011E0ED /* Debug */ = {
+		3750E05E24E4D91300DBDE19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -411,7 +498,7 @@
 			};
 			name = Debug;
 		};
-		375A3AD82498618C0011E0ED /* Release */ = {
+		3750E05F24E4D91300DBDE19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -463,168 +550,172 @@
 			};
 			name = Release;
 		};
-		375A3ADA2498618C0011E0ED /* Debug */ = {
+		3750E06124E4D91300DBDE19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D4L8SN8WYW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OTLog-demo",
-					"$(PROJECT_DIR)/OTLog-demo/OTLog",
-					"$(PROJECT_DIR)/OTLog",
+					"$(PROJECT_DIR)/OTLog-Demo",
 				);
-				INFOPLIST_FILE = "OTLog-demo/Info.plist";
+				INFOPLIST_FILE = "OTLog-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		375A3ADB2498618C0011E0ED /* Release */ = {
+		3750E06224E4D91300DBDE19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D4L8SN8WYW;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OTLog-demo",
-					"$(PROJECT_DIR)/OTLog-demo/OTLog",
-					"$(PROJECT_DIR)/OTLog",
+					"$(PROJECT_DIR)/OTLog-Demo",
 				);
-				INFOPLIST_FILE = "OTLog-demo/Info.plist";
+				INFOPLIST_FILE = "OTLog-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-demo";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		375A3ADD2498618C0011E0ED /* Debug */ = {
+		3750E06424E4D91300DBDE19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4L8SN8WYW;
-				INFOPLIST_FILE = "OTLog-demoTests/Info.plist";
+				INFOPLIST_FILE = "OTLog-DemoTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-demoTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTLog-demo.app/OTLog-demo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTLog-Demo.app/OTLog-Demo";
 			};
 			name = Debug;
 		};
-		375A3ADE2498618C0011E0ED /* Release */ = {
+		3750E06524E4D91300DBDE19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4L8SN8WYW;
-				INFOPLIST_FILE = "OTLog-demoTests/Info.plist";
+				INFOPLIST_FILE = "OTLog-DemoTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-demoTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-DemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTLog-demo.app/OTLog-demo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTLog-Demo.app/OTLog-Demo";
 			};
 			name = Release;
 		};
-		375A3AE02498618C0011E0ED /* Debug */ = {
+		3750E06724E4D91300DBDE19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4L8SN8WYW;
-				INFOPLIST_FILE = "OTLog-demoUITests/Info.plist";
+				INFOPLIST_FILE = "OTLog-DemoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-demoUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-DemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "OTLog-demo";
+				TEST_TARGET_NAME = "OTLog-Demo";
 			};
 			name = Debug;
 		};
-		375A3AE12498618C0011E0ED /* Release */ = {
+		3750E06824E4D91300DBDE19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D4L8SN8WYW;
-				INFOPLIST_FILE = "OTLog-demoUITests/Info.plist";
+				INFOPLIST_FILE = "OTLog-DemoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-demoUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cuirhong.OTLog-DemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "OTLog-demo";
+				TEST_TARGET_NAME = "OTLog-Demo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		375A3AA52498618B0011E0ED /* Build configuration list for PBXProject "OTLog-demo" */ = {
+		3750E02C24E4D91200DBDE19 /* Build configuration list for PBXProject "OTLog-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				375A3AD72498618C0011E0ED /* Debug */,
-				375A3AD82498618C0011E0ED /* Release */,
+				3750E05E24E4D91300DBDE19 /* Debug */,
+				3750E05F24E4D91300DBDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		375A3AD92498618C0011E0ED /* Build configuration list for PBXNativeTarget "OTLog-demo" */ = {
+		3750E06024E4D91300DBDE19 /* Build configuration list for PBXNativeTarget "OTLog-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				375A3ADA2498618C0011E0ED /* Debug */,
-				375A3ADB2498618C0011E0ED /* Release */,
+				3750E06124E4D91300DBDE19 /* Debug */,
+				3750E06224E4D91300DBDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		375A3ADC2498618C0011E0ED /* Build configuration list for PBXNativeTarget "OTLog-demoTests" */ = {
+		3750E06324E4D91300DBDE19 /* Build configuration list for PBXNativeTarget "OTLog-DemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				375A3ADD2498618C0011E0ED /* Debug */,
-				375A3ADE2498618C0011E0ED /* Release */,
+				3750E06424E4D91300DBDE19 /* Debug */,
+				3750E06524E4D91300DBDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		375A3ADF2498618C0011E0ED /* Build configuration list for PBXNativeTarget "OTLog-demoUITests" */ = {
+		3750E06624E4D91300DBDE19 /* Build configuration list for PBXNativeTarget "OTLog-DemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				375A3AE02498618C0011E0ED /* Debug */,
-				375A3AE12498618C0011E0ED /* Release */,
+				3750E06724E4D91300DBDE19 /* Debug */,
+				3750E06824E4D91300DBDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 375A3AA22498618B0011E0ED /* Project object */;
+	rootObject = 3750E02924E4D91200DBDE19 /* Project object */;
 }

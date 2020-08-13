@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
  
   spec.name         = "OTAliyunLog"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0.0"
   spec.summary      = "阿里云日志上传"
  
   spec.homepage     = 'https://github.com/jhbshow/aliyun-log-sdk-ios.git'
@@ -13,14 +13,12 @@ Pod::Spec.new do |spec|
 
   spec.author             = { "cuirhong" => "cuirhong@126.com" }
  
-  spec.source       = { :git => "https://github.com/jhbshow/aliyun-log-sdk-ios.git", :tag => "0.0.1" }
+  spec.source       = { :git => "https://github.com/jhbshow/aliyun-log-sdk-ios.git", :tag => spec.version.to_s }
   spec.platform     = :ios,'9.0'
  
   #需要包含的源文件
-  spec.source_files = 'OTLog/OTLog.framework/Headers/*.{h}'
-  #你的SDK路径
-  spec.vendored_frameworks = 'OTLog/OTLog.framework'
-  #SDK头文件路径
-  spec.public_header_files = 'OTLog/OTLog.framework/Headers/OTLog.h'
-  spec.swift_versions = "4.0"
+  spec.source_files = 'OTLog/**/*.{h,swift,c}'
+  spec.swift_versions = "5.0"
+  # 第三方开源框架(多个)
+  spec.dependency 'FMDB'
 end

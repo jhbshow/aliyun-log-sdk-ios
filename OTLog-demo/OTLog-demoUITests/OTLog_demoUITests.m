@@ -1,18 +1,18 @@
 //
-//  OTLog_demoUITests.m
-//  OTLog-demoUITests
+//  OTLog_DemoUITests.m
+//  OTLog-DemoUITests
 //
-//  Created by cuirhong on 2020/6/16.
+//  Created by cuirhong on 2020/8/13.
 //  Copyright © 2020 cuirhong. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface OTLog_demoUITests : XCTestCase
+@interface OTLog_DemoUITests : XCTestCase
 
 @end
 
-@implementation OTLog_demoUITests
+@implementation OTLog_DemoUITests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.

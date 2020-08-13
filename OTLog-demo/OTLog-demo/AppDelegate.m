@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  OTLog-demo
+//  OTLog-Demo
 //
-//  Created by cuirhong on 2020/6/16.
+//  Created by cuirhong on 2020/8/13.
 //  Copyright © 2020 cuirhong. All rights reserved.
 //
 
