@@ -7,9 +7,9 @@ Step 1.在Podfie文件中添加
 ```   
 pod 'OTAliyunLog'
 ```       
-Step 2.需要使用的OC文件中引入头文件：
+Step 2.支持引用swift文件即可，到：
 ```   
-#import <OTLog/OTLog-Swift.h>
+Xcode(Build Settings中查找Objective-C Generated Interface Header Name)->文件中引入这个.h文件即可使用
 ```   
 # Usage:
 ### 初始化参数

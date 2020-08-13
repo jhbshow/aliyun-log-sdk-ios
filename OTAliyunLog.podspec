@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
  
   spec.name         = "OTAliyunLog"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "阿里云日志上传"
  
   spec.homepage     = 'https://github.com/jhbshow/aliyun-log-sdk-ios.git'
@@ -21,4 +21,5 @@ Pod::Spec.new do |spec|
   spec.swift_versions = "5.0"
   # 第三方开源框架(多个)
   spec.dependency 'FMDB'
+  #spec.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 end
