@@ -69,10 +69,13 @@
     [logModel PutContent:@"userId" value:@"23232"];
     
     OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"topic-20200616" logSource:@"source-20200616" logContents:@[logModel] logTagContentMap:NULL];
-    [[OTLogManager sharedInstance] saveLogWithLogGroupModel:logGroupModel];
+//    [[OTLogManager sharedInstance] saveLogWithLogGroupModel:logGroupModel];
+    
+    
 }
 
 -(void) uploadLocalLog{
+//    [[OTLogManager sharedInstance] deleteLogWithLogGroupModel:nil];
     [[OTLogManager sharedInstance] startUploadLogWithTimeInterval:60];
 }
 

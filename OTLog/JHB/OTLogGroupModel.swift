@@ -35,6 +35,11 @@ import Foundation
     open var saveCount:Int = 0
     
     /**
+     FMDB数据库id
+     */
+    open var sqliteId:String?
+    
+    /**
      初始化方法
      */
     @objc public init(logTopic:String?="",logSource:String?="",logContents:[OTLogModel],logTagContentMap:Dictionary<String, Any>?=nil){
@@ -78,9 +83,6 @@ import Foundation
         }
         return newLogGroup
     }
-    
- 
- 
     open func getSource()->String{
         return logSource ?? ""
     }

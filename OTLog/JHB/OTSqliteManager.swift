@@ -23,13 +23,13 @@ class OTSqliteManager:NSObject{
             dbManager.dbQueue?.inDatabase({ (db) in
                 do {
                     guard let logConfig = OTLogManager.sharedInstance.logConfig else {
-                        NSLog("%@", "日志上传配置为空");
+                        print("日志上传配置为空")
                         return
                     }
-                    let timestamp = Date.timeIntervalBetween1970AndReferenceDate
+                    let timestamp = Date.timeIntervalSinceReferenceDate
                     let logString = logGroupModel.convertToLogGroup().GetJsonPackage();
-     
                     try db.executeUpdate(sls_sql_insert_records, values: [logConfig.endPoint, logConfig.projectName, logConfig.logStoreName, logString, timestamp])
+                    logGroupModel.sqliteId =  String(format: "%d", db.lastInsertRowId)
                     call(true,nil)
                 } catch {
                      call(false,nil)
@@ -48,13 +48,58 @@ class OTSqliteManager:NSObject{
         return success
     }
     
+    /**
+     删除日志
+     */
+    class func deleteLog(logGroupModel:OTLogGroupModel?){
+        guard let logId = logGroupModel?.sqliteId else {
+            return
+        }
+        DispatchQueue.global().async {
+            dbManager.dbQueue?.inDatabase({ (db) in
+                do{
+                    let sql = String(format: sls_sql_delete_specific_records, arguments: [logId as CVarArg])
+                    try db.executeUpdate(sql, values: nil)
+                } catch {
+                    print("failed to delete record: \(error.localizedDescription)")
+                }
+            })
+        }
+    }
+    
     
     /**
      获取本地日志数据
      */
-    class func readLocalLogs()->NSArray{
+    class func readLocalLogs()->[String]{
         let logArray = NSArray(contentsOfFile: localFilePath)
-        return logArray ?? []
+        return (logArray ?? []) as! [String]
     }
-     
+    
+    //MARK:- 删除日志从本地
+   class func deleteLogFromLocal(logGroupModel:OTLogGroupModel) {
+        DispatchQueue.main.async {
+            var dataArray = OTSqliteManager.readLocalLogs()
+            var newDataArray:NSMutableArray = []
+            newDataArray.write(toFile: OTSqliteManager.localFilePath, atomically: true)
+            DispatchQueue.global().async {
+                
+                let newLogString = logGroupModel.convertToLogGroup().GetJsonPackage()
+                for (index,logString) in dataArray.enumerated() {
+                    if(logString == newLogString){
+                        dataArray.remove(at: index)
+                        break
+                    }
+                }
+                //回到主线程
+                DispatchQueue.main.async {
+                    newDataArray = NSMutableArray(array: OTSqliteManager.readLocalLogs())
+                    newDataArray.addObjects(from: dataArray)
+                    newDataArray.write(toFile: OTSqliteManager.localFilePath, atomically: true)
+                }
+            }
+        }
+        
+    }
+    
 }

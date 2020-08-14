@@ -7,11 +7,20 @@ Step 1.在Podfie文件中添加
 ```   
 pod 'OTAliyunLog'
 ```       
-Step 2.支持引用swift文件即可，到：
+Step 2.引入头文件：
 ```   
-Xcode(Build Settings中查找Objective-C Generated Interface Header Name)->文件中引入这个.h文件即可使用
+@import OTAliyunLog;
 ```   
-# Usage:
+# Swift接入
+Step 1.在Podfie文件中添加
+```   
+pod 'OTAliyunLog'
+```    
+Step 2.引入头文件：
+```   
+import OTAliyunLog
+```   
+# Usage(Object-C):
 ### 初始化参数
 ``` 
 NSString *regionEndpoint = @"cn-shenzhen.log.aliyuncs.com";
