@@ -4,21 +4,21 @@
 ---
 
 ## 接入
-* Object-C(cocopods集成)：
-1. 在Podfie文件中添加
+1. Object-C(cocopods集成)：
+* 在Podfie文件中添加
 ```ruby   
 pod 'OTAliyunLog'
 ```       
-2. 引入头文件：
+* 引入头文件：
 ``` objective-c  
 @import OTAliyunLog;
 ```   
-* Swift(cocopods集成)
-1. 在Podfie文件中添加
+2. Swift(cocopods集成)
+* 在Podfie文件中添加
 ```ruby   
 pod 'OTAliyunLog'
 ```    
-2. 引入头文件：
+* 引入头文件：
 ```objective-c   
 import OTAliyunLog
 ```  
