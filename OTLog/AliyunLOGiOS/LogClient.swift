@@ -92,18 +92,13 @@ public class LOGClient: NSObject {
         let jsonpackage = logGroup.GetJsonPackage()
         let httpPostBody = jsonpackage.data(using: String.Encoding.utf8)!
         
-        let httpPostBodyZipped = httpPostBody
-        
-        let httpHeaders = self.GetHttpHeadersFrom(logStoreName,url: httpUrl,body: httpPostBody,bodyZipped: httpPostBodyZipped)
-        
-        HttpPostRequest(httpUrl, headers: httpHeaders, body: httpPostBodyZipped, callBack: {(result, error) in
-//            if (error != nil && (self?.mConfig.isCachable)!) {
-//                let timestamp = Date.timeIntervalBetween1970AndReferenceDate
-//                    DBManager.defaultManager().insertRecords(endpoint: (self?.mEndPoint)!, project: (self?.mProject)!, logstore: logStoreName, log: jsonpackage, timestamp: timestamp)
-//            }
-            call(result, error)
-        })
-    
+        if let httpPostBodyZipped =  httpPostBody.GZip{
+            let httpHeaders = self.GetHttpHeadersFrom(logStoreName,url: httpUrl,body: httpPostBody,bodyZipped: httpPostBodyZipped)
+            
+            HttpPostRequest(httpUrl, headers: httpHeaders, body: httpPostBodyZipped, callBack: {(result, error) in
+                call(result, error)
+            })
+        }
     }
     
     open func PostLogInCache(logstore: String, logMsg: String, call: @escaping (URLResponse?, NSError?) -> ()){
@@ -112,12 +107,11 @@ public class LOGClient: NSObject {
         let httpUrl = "https://\(self.mProject).\(self.mEndPoint)/logstores/\(logstore)/shards/lb"
         
         let httpPostBody = logMsg.data(using: .utf8)!
-        let httpPostBodyZipped = httpPostBody.GZip!
-        
-        let httpHeaders = self.GetHttpHeadersFrom(logstore , url: httpUrl, body: httpPostBody, bodyZipped: httpPostBodyZipped)
-        
-        HttpPostRequest(httpUrl, headers: httpHeaders, body: httpPostBodyZipped, callBack: call)
-        
+        if let httpPostBodyZipped = httpPostBody.GZip{
+            let httpHeaders = self.GetHttpHeadersFrom(logstore , url: httpUrl, body: httpPostBody, bodyZipped: httpPostBodyZipped)
+            
+            HttpPostRequest(httpUrl, headers: httpHeaders, body: httpPostBodyZipped, callBack: call)
+        }
     }
     
     fileprivate func GetHttpHeadersFrom(_ logstore:String,url:String,body:Data,bodyZipped:Data) -> [String:String]{
@@ -131,7 +125,7 @@ public class LOGClient: NSObject {
         // 8EB16B742CBE7D02F401F91BF0FA7D68
         headers[KEY_CONTENT_LENGTH] = "\(bodyZipped.count)"
         headers[KEY_LOG_BODYRAWSIZE] = "\(body.count)"
-//        headers[KEY_LOG_COMPRESSTYPE] = POST_VALUE_LOG_COMPRESSTYPE
+        headers[KEY_LOG_COMPRESSTYPE] = POST_VALUE_LOG_COMPRESSTYPE
         headers[KEY_HOST] = self.getHostIn(url)
         headers[KEY_REQUEST_UA] = VALUE_REQUEST_UA
         
@@ -148,7 +142,7 @@ public class LOGClient: NSObject {
         
         signString += "\(KEY_LOG_APIVERSION):0.6.0\n"
         signString += "\(KEY_LOG_BODYRAWSIZE):\(headers[KEY_LOG_BODYRAWSIZE]!)\n"
-       
+       signString += "\(KEY_LOG_COMPRESSTYPE):\(POST_VALUE_LOG_COMPRESSTYPE)\n"
         signString += "\(KEY_LOG_SIGNATUREMETHOD):\(POST_VALUE_LOG_SIGNATUREMETHOD)\n"
         signString += "/logstores/\(logstore)/shards/lb"
         let sign  =  hmac_sha1(signString, key: mAccessKeySecret)

@@ -88,8 +88,8 @@ import Foundation
                     DispatchQueue.main.async {
                         //主线程，防止线程问题
                         let _ = OTSqliteManager.saveLogToLocal(logGroupModel: logGroupModel)
+                         call(false,nil)
                     }
-                    call(false,nil)
                 }else{
                     self?.saveLog(logGroupModel: logGroupModel,call: call)
                 }
