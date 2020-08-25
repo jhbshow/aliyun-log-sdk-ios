@@ -45,7 +45,7 @@ import Foundation
      上传日志
      */
     @objc open func postLog(_ logGroup:OTLogGroupModel,call: @escaping (OTPostLogResult) -> ()){
-        saveLog(logGroupModel: logGroup) {[weak self] (isCussful, error) in
+        saveLog(logGroupModel: logGroup) {[weak self] (isCussful, saveError) in
             self?.logClient?.PostLog(logGroup.convertToLogGroup(), logStoreName: self?.logConfig?.logStoreName ?? "", call: {(response, error) in
                 if(error == nil){
                     //上传成功
@@ -105,8 +105,8 @@ import Foundation
     }
     
     //MARK:- 删除日志从本地
-    func deleteLogFromLocal(logGroupModel:OTLogGroupModel) {
-        OTSqliteManager.deleteLogFromLocal(logGroupModel: logGroupModel)
+    func deleteLogFromLocal(logGroupModel:OTLogGroupModel?=nil,localLogDict:[String:Any]? = nil) {
+        OTSqliteManager.deleteLogFromLocal(logGroupModel: logGroupModel,localLogDict: localLogDict)
     }
     
     

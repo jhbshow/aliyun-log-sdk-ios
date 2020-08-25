@@ -68,20 +68,24 @@ open class CacheCheckManager: NSObject {
         
         if shouldPostViaWiFi || shouldPost {
             DispatchQueue.global().async {
+                //DB日志
                 let logs = DBManager.defaultManager().fetchRecords(limit: 30)
-                guard logs.count > 0 && !self.pending  else {
+              
+                let logsDataArray:NSMutableArray = logs.mutableCopy() as? NSMutableArray ?? []
+                //本地日志
+                let dataArray = OTSqliteManager.readLocalLogs()
+                logsDataArray.addObjects(from: dataArray)
+                guard logsDataArray.count > 0 && !self.pending  else {
                     return
                 }
-                
-                for log in logs {
+                for log in logsDataArray {
                     if let record = log as? NSDictionary {
                         let id = (record.value(forKey: SLS_TABLE_COLUMN_NAME.id.rawValue) as? UInt64) ?? 0
                         let endpoint = (record.value(forKey: SLS_TABLE_COLUMN_NAME.endpoint.rawValue) as? String) ?? ""
                         let project = (record.value(forKey: SLS_TABLE_COLUMN_NAME.project.rawValue) as? String) ?? ""
                         let logstore = (record.value(forKey: SLS_TABLE_COLUMN_NAME.logstore.rawValue) as? String) ?? ""
                         let msg = record.value(forKey: SLS_TABLE_COLUMN_NAME.log.rawValue) as? String ?? ""
-                        
-                        if (self.mClient?.mEndPoint == endpoint && self.mClient?.mProject == project) {
+                        if (self.mClient?.mEndPoint == endpoint && self.mClient?.mProject == project &&  logstore == OTLogManager.sharedInstance.logConfig?.logStoreName) {
                             self.group?.enter()
                             self.pending = true;
                             
@@ -91,7 +95,12 @@ open class CacheCheckManager: NSObject {
                                     print("缓存日志发送失败,error:\(String(describing: error))")
                                 } else {
                                     print("缓存日志发送成功)")
-                                    DBManager.defaultManager().deleteRecord(record: ["id": id])
+                                    if(id > 0){
+                                        DBManager.defaultManager().deleteRecord(record: ["id": id])
+                                    }else{
+                                        OTLogManager.sharedInstance.deleteLogFromLocal(localLogDict: record as? [String : Any] ?? [:])
+                                    }
+                                    
                                 }
                             })
                         }

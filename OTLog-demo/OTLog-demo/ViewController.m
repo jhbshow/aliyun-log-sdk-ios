@@ -57,7 +57,7 @@
     OTLogModel *logModel = [[OTLogModel alloc]init];
     [logModel PutContent:@"url" value:@"/test/url"];
     [logModel PutContent:@"userId" value:@"23232"];
-    OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"topic-20200616" logSource:@"source-20200616" logContents:@[logModel] logTagContentMap:NULL];
+    OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"topic-20200616" logSource:@"source-20200616" logContents:@[logModel]];
     [[OTLogManager sharedInstance] postLog:logGroupModel call:^(OTPostLogResult * result) {
         NSLog(@"%@",[result.response description]);
     }];
@@ -68,8 +68,10 @@
     [logModel PutContent:@"url" value:@"/test/url"];
     [logModel PutContent:@"userId" value:@"23232"];
     
-    OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"topic-20200616" logSource:@"source-20200616" logContents:@[logModel] logTagContentMap:NULL];
-//    [[OTLogManager sharedInstance] saveLogWithLogGroupModel:logGroupModel];
+    OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"topic-20200616" logSource:@"source-20200616" logContents:@[logModel]];
+    [[OTLogManager sharedInstance] saveLogWithLogGroupModel:logGroupModel call:^(BOOL isSuccful, NSError * _Nullable error) {
+         
+    }];
     
     
 }

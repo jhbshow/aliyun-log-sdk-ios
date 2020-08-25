@@ -43,7 +43,7 @@ class OTSqliteManager:NSObject{
      */
     class func saveLogToLocal(logGroupModel:OTLogGroupModel)->Bool{
         let dataArray = NSMutableArray(array: OTSqliteManager.readLocalLogs());
-        dataArray.add(logGroupModel.convertToLogGroup().GetJsonPackage())
+        dataArray.add(logGroupModel.getSaveToLocalInfoDict())
         let success = dataArray.write(toFile: localFilePath, atomically: true)
         return success
     }
@@ -71,22 +71,23 @@ class OTSqliteManager:NSObject{
     /**
      获取本地日志数据
      */
-    class func readLocalLogs()->[String]{
+    class func readLocalLogs()->[[String:Any]]{
         let logArray = NSArray(contentsOfFile: localFilePath)
-        return (logArray ?? []) as! [String]
+        return ((logArray ?? []) as? [[String:Any]]) ?? []
     }
     
     //MARK:- 删除日志从本地
-   class func deleteLogFromLocal(logGroupModel:OTLogGroupModel) {
+    class func deleteLogFromLocal(logGroupModel:OTLogGroupModel?,localLogDict:[String:Any]?) {
         DispatchQueue.main.async {
             var dataArray = OTSqliteManager.readLocalLogs()
             var newDataArray:NSMutableArray = []
             newDataArray.write(toFile: OTSqliteManager.localFilePath, atomically: true)
             DispatchQueue.global().async {
-                
-                let newLogString = logGroupModel.convertToLogGroup().GetJsonPackage()
-                for (index,logString) in dataArray.enumerated() {
-                    if(logString == newLogString){
+                let newDict = logGroupModel?.getSaveToLocalInfoDict() ?? localLogDict
+                for (index,dict) in dataArray.enumerated() {
+                    let oldLogString = dict[SLS_TABLE_COLUMN_NAME.logstore.rawValue] as? String ?? ""
+                    let newLogString = newDict?[SLS_TABLE_COLUMN_NAME.logstore.rawValue] as? String ?? ""
+                    if(oldLogString == newLogString){
                         dataArray.remove(at: index)
                         break
                     }

@@ -53,3 +53,24 @@ OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"top
 ```   
 [[OTLogManager sharedInstance] startUploadLogWithTimeInterval:60];
 ```   
+
+
+# 更新SDK
+1. 打tag，到git仓库
+```
+git tag 1.0.0
+```
+2. 更新OTAliyunLog.podspec的version，和上面的tag对应
+3. git仓库release 刚刚的tag
+4. 发布到cocopods
+```
+pod trunk push OTAliyunLog.podspec --allow-warnings --verbose
+```
+5. 如果search不到执行：
+```
+pod repo add OTAliyunLog https://github.com/jhbshow/aliyun-log-sdk-ios.git
+```
+6. 如果刚更新SDK，执行pod install找不到(替代pod install执行):
+```
+pod install --repo-update
+```

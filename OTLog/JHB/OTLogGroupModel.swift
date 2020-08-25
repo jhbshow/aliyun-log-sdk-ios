@@ -42,12 +42,13 @@ import Foundation
     /**
      初始化方法
      */
-    @objc public init(logTopic:String?="",logSource:String?="",logContents:[OTLogModel],logTagContentMap:Dictionary<String, Any>?=nil){
+    @objc public init(logTopic:String?="",logSource:String?="",logContents:[OTLogModel]){
         super.init();
         self.logTopic = logTopic
         self.logSource = logSource
         self.logContents = logContents
-        self.logTagContentMap = logTagContentMap
+        //获取当前时间
+        
     }
     
     /**
@@ -83,8 +84,19 @@ import Foundation
         }
         return newLogGroup
     }
+    //MARK:- 获取日志源
     open func getSource()->String{
         return logSource ?? ""
+    }
+    
+    //MARK:- 获取本地保存数据结构
+    open func getSaveToLocalInfoDict()->[String:Any]{
+        var dict:[String:Any] = [:]
+        dict[SLS_TABLE_COLUMN_NAME.log.rawValue] = convertToLogGroup().GetJsonPackage()
+        dict[SLS_TABLE_COLUMN_NAME.endpoint.rawValue] = OTLogManager.sharedInstance.logConfig?.endPoint ?? ""
+        dict[SLS_TABLE_COLUMN_NAME.project.rawValue] = OTLogManager.sharedInstance.logConfig?.projectName ?? ""
+         dict[SLS_TABLE_COLUMN_NAME.logstore.rawValue] = OTLogManager.sharedInstance.logConfig?.logStoreName ?? ""
+        return dict
     }
     
 }
