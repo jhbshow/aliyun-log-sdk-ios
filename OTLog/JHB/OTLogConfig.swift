@@ -7,6 +7,19 @@
 //
 
 import Foundation
+//日志等级
+@objc public enum OTLogLevel:Int {
+    case all = 0;
+    case trace;
+    case debug;
+    case info;
+    case warn;
+    case error;
+    case fatal;
+    case mark;
+    case off;
+}
+
 @objc open class OTLogConfig: NSObject {
     
     var endPoint:String = ""
@@ -25,6 +38,9 @@ import Foundation
      阿里云SLS配置
      */
     var config: SLSConfig = SLSConfig()
+
+    //MARK:- 日志最低等级(只有大于这个等级才记录日志,默认记录警告以上的日志)
+    @objc public var logLowestLevel:OTLogLevel = OTLogLevel.warn
     
     @objc public init(endPoint:String,accessKeyID:String,accessKeySecret :String,projectName:String,logStoreName:String, token: String? = nil){
         super.init()

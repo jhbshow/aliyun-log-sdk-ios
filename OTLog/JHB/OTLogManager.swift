@@ -44,23 +44,28 @@ import Foundation
     /**
      上传日志
      */
-    @objc open func postLog(_ logGroup:OTLogGroupModel,call: @escaping (OTPostLogResult) -> ()){
-        saveLog(logGroupModel: logGroup) {[weak self] (isCussful, saveError) in
-            self?.logClient?.PostLog(logGroup.convertToLogGroup(), logStoreName: self?.logConfig?.logStoreName ?? "", call: {(response, error) in
-                if(error == nil){
-                    //上传成功
-                    if(isCussful){
-                        //保存在sqlite
-                        self?.deleteLog(logGroupModel: logGroup)
-                    }else{
-                        //保存在本地
-                        self?.deleteLogFromLocal(logGroupModel: logGroup)
+    @objc open func postLog(_ logGroup:OTLogGroupModel,logLevel:OTLogLevel=OTLogLevel.warn,call: @escaping (OTPostLogResult) -> ()){
+        let lowestLevel = self.logConfig?.logLowestLevel ?? OTLogLevel.off
+        if(logLevel.rawValue >= lowestLevel.rawValue){
+            //只有大于等于最低等级的才会上传
+            saveLog(logGroupModel: logGroup) {[weak self] (isInDb, saveError) in
+                self?.logClient?.PostLog(logGroup.convertToLogGroup(), logStoreName: self?.logConfig?.logStoreName ?? "", call: {(response, error) in
+                    if(error == nil){
+                        //上传成功
+                        if(isInDb){
+                            //从Db删除
+                            self?.deleteLog(logGroupModel: logGroup)
+                        }else{
+                            //从本地文件删除
+                            self?.deleteLogFromLocal(logGroupModel: logGroup)
+                        }
                     }
-                }
-                let result = OTPostLogResult(response: response, error: error)
-                call(result)
-            })
+                    let result = OTPostLogResult(response: response, error: error)
+                    call(result)
+                })
+            }
         }
+        
     }
     
     /**
@@ -79,8 +84,8 @@ import Foundation
      保存日志
      */
     @objc open func saveLog(logGroupModel:OTLogGroupModel,call: @escaping (Bool, Error?) -> ()){
-        OTSqliteManager.saveLogToDB(logGroupModel: logGroupModel) {[weak self] (isCussful, error) in
-            if(!isCussful){
+        OTSqliteManager.saveLogToDB(logGroupModel: logGroupModel) {[weak self] (isSuccess, error) in
+            if(!isSuccess){
                 //保存失败
                 logGroupModel.saveCount = logGroupModel.saveCount + 1
                 if(logGroupModel.saveCount >= 2){
@@ -94,7 +99,7 @@ import Foundation
                     self?.saveLog(logGroupModel: logGroupModel,call: call)
                 }
             }else{
-                call(isCussful,error)
+                call(isSuccess,error)
             }
         }
     }
