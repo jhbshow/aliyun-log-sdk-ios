@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
  
   spec.name         = "OTAliyunLog"
-  spec.version      = "1.2.0"
+  spec.version      = "1.2.1"
   spec.summary      = "阿里云日志上传"
  
   spec.homepage     = 'https://github.com/jhbshow/aliyun-log-sdk-ios.git'

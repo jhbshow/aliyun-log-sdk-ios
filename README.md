@@ -10,7 +10,7 @@ pod 'OTAliyunLog'
 ```       
 2. 引入头文件：
 * OC
-``` objective-c  
+```objective-c  
 @import OTAliyunLog;
 ```   
 * swift：
@@ -45,8 +45,8 @@ OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"top
 * 保存日志:
 ```objective-c
 OTLogModel *logModel = [[OTLogModel alloc]init];
-  [logModel PutContent:@"url" value:@"/test/url"];
-  [logModel PutContent:@"userId" value:@"23232"];
+[logModel PutContent:@"url" value:@"/test/url"];
+[logModel PutContent:@"userId" value:@"23232"];
 OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"topic-20200616" logSource:@"source-20200616" logContents:@[logModel] logTagContentMap:NULL];
 [[OTLogManager sharedInstance] saveLogWithLogGroupModel:logGroupModel];
 ```
@@ -58,21 +58,22 @@ OTLogGroupModel *logGroupModel = [[OTLogGroupModel alloc] initWithLogTopic:@"top
 ---
 
 ## SDK更新
-1. 打tag（发布对应的版本），到git仓库
-``` ruby
+1. 打tag（SDK对应的版本），push到git仓库
+```ruby
 git tag 1.0.0
+git push --tags
 ```
-2. 更新OTAliyunLog.podspec文件中的version，和上面的tag对应
-3. 到 git仓库release 刚刚的tag版本
-4. 发布到cocopods
+2. 更新OTAliyunLog.podspec文件中的version(与上面的tag对应)
+```ruby
+spec.version      = "1.0.0"
+```
+3. git仓库Release刚刚的tag版本
+
+4. 发布到cocopods：
 ```ruby
 pod trunk push OTAliyunLog.podspec --allow-warnings --verbose
 ```
-5. pod search找不到：
-```ruby
-pod repo add OTAliyunLog https://github.com/jhbshow/aliyun-log-sdk-ios.git
-```
-6. 刚更新SDK，执行pod install找不到:
+5. 更新SDK之后，pod install找不到:
 ```ruby
 pod install --repo-update
 ```

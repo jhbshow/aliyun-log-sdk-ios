@@ -46,8 +46,8 @@ import Foundation
      */
     @objc open func postLog(_ logGroup:OTLogGroupModel,logLevel:OTLogLevel=OTLogLevel.warn,call: @escaping (OTPostLogResult) -> ()){
         let lowestLevel = self.logConfig?.logLowestLevel ?? OTLogLevel.off
-        if(logLevel.rawValue >= lowestLevel.rawValue){
-            //只有大于等于最低等级的才会上传
+        if(lowestLevel != OTLogLevel.off && logLevel.rawValue >= lowestLevel.rawValue){
+            //只有不是关闭状态 && 大于等于最低等级的才会上传
             saveLog(logGroupModel: logGroup) {[weak self] (isInDb, saveError) in
                 self?.logClient?.PostLog(logGroup.convertToLogGroup(), logStoreName: self?.logConfig?.logStoreName ?? "", call: {(response, error) in
                     if(error == nil){

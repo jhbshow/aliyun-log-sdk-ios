@@ -14,8 +14,8 @@ import Foundation
     public override init(){
         mContent[KEY_TIME] = Int(Date().timeIntervalSince1970) as AnyObject?
     }
-    @objc open func PutContent(_ key:String,value:String){
-   
+    
+    @objc open func putLogContent(_ key:String,value:String){
         mContent[key] = value as AnyObject?
     }
 }
